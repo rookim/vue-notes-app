@@ -1,39 +1,33 @@
-<script>
-import NoteToolbar from "./components/NoteToolbar.vue";
-import NoteContainer from "./components/NoteContainer.vue";
-export default {
-  components: {
-    NoteToolbar,
-    NoteContainer,
-  },
-};
-</script>
-
 <template>
-  <div id="app">
-    <!-- toolbar -->
-    <NoteToolbar />
-    <!-- note-container -->
-    <NoteContainer />
+  <div class="note-container">
+    <div class="note-selectors">
+      <div class="note-selector active">
+        <p class="note-selector-title">First note...</p>
+        <p class="note-selector-timestamp">Timestamp here...</p>
+      </div>
+      <div class="note-selector">
+        <p class="note-selector-title">Second note...</p>
+        <p class="note-selector-timestamp">Timestamp here...</p>
+      </div>
+      <div class="note-selector">
+        <p class="note-selector-title">Third note...</p>
+        <p class="note-selector-timestamp">Timestamp here...</p>
+      </div>
+    </div>
+    <div class="note-editor">
+      <p class="note-editor-info">Timestamp here...</p>
+      <textarea class="note-editor-input">
+	          First note...
+
+	          Note text here...
+	        </textarea
+      >
+    </div>
   </div>
 </template>
 
 <style>
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: none;
-  box-sizing: border-box;
-}
-
 /* LAYOUT */
-#app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
 .note-container {
   display: flex;
   flex: 1;
@@ -89,9 +83,6 @@ export default {
 }
 
 /* TYPOGRAPHY */
-body {
-  font-family: sans-serif;
-}
 .note-selector-title {
   font-weight: bold;
 }
